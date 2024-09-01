@@ -18,11 +18,21 @@ const PORT = ENV_VARS.PORT;
 const __dirname = path.resolve();
 
 
-app.use(cors({
-  origin: 'https://66d47d7b82b0db0ec6aca5b5--stellar-griffin-33ce6a.netlify.app',  
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-  credentials: true  
-}));
+const allowedOrigins = [
+  'https://66d4b5ec2c5be823aa18519d--stellar-griffin-33ce6a.netlify.app',
+  'https://66d47d7b82b0db0ec6aca5b5--stellar-griffin-33ce6a.netlify.app'
+];
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+      res.header('Access-Control-Allow-Origin', origin);
+  }
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
 
 app.use(express.json()); // will allow us to parse req.body
 app.use(cookieParser());
