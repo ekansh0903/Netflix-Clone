@@ -19,7 +19,7 @@ const __dirname = path.resolve();
 
 
 app.use(cors({
-  origin: 'https://66d47d7b82b0db0ec6aca5b5--stellar-griffin-33ce6a.netlify.app',  
+  origin: 'https://66d47d7b82b0db0ec6aca5b5--stellar-griffin-33ce6a.netlify.app/',  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
   credentials: true  
 }));
