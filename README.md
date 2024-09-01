@@ -26,9 +26,15 @@ This is a Netflix clone project built using the MERN stack (MongoDB, Express, Re
    git clone https://github.com/ekansh0903/Netflix-Clone.git
    cd Netflix-Clone
 
-2. For run backend use :- npm run start
+2. For run backend use 
 
-3. For run frontend use :- npm run dev
+   ```bash
+   npm run start
+
+3. For run frontend use 
+  
+  ```bash
+   npm run dev
 
 
 ## Deployment ##
