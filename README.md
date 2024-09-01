@@ -37,7 +37,3 @@ This is a Netflix clone project built using the MERN stack (MongoDB, Express, Re
    npm run dev
 
 
-## Deployment ##
-
-For Backend deployment I used Re1nder and for frontend I used netlify.
-
