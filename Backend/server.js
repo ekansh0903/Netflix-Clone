@@ -20,7 +20,8 @@ const __dirname = path.resolve();
 
 const allowedOrigins = [
   'http://127.0.0.1:5173/',
-  'https://stellar-griffin-33ce6a.netlify.app'
+  'https://stellar-griffin-33ce6a.netlify.app',
+  'https://66d47d7b82b0db0ec6aca5b5--stellar-griffin-33ce6a.netlify.app'
 ];
 
 app.use((req, res, next) => {
